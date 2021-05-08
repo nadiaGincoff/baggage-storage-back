@@ -10,8 +10,8 @@ module.exports = function() {
     router.get('/', homeController)
     
     // Clients
-    router.get('/clients', userController.getAllClients)
-    router.post('/new-client', userController.newClient)
+    router.get('/passengers', userController.getAllPassengers)
+    router.post('/new-passenger', userController.newPassenger)
 
     // Storage
     router.post('/new-package', storageController.newPackage)

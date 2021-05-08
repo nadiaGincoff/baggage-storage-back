@@ -1,15 +1,15 @@
 const Users = require('../models/Users')
 
 // add new user
-const newClient = async (req, res) => {
-    const client = req.query
+const newPassenger = async (req, res) => {
+    const passenger = req.query
     try {
-        const newClient = await Users.create(client)
+        const newPassenger = await Users.create(passenger)
         console.log('Add new client succesfully')
         // res.redirect('/clients')
         return res.status(200).json({
             success: true,
-            data: newClient,
+            data: newPassenger,
         })
     } catch (error) {
        console.log(error)
@@ -17,12 +17,12 @@ const newClient = async (req, res) => {
     }
 }
 
-const getAllClients = async (req, res) => {
+const getAllPassengers = async (req, res) => {
     try {
-        const clients = await Users.findAll()
+        const passengers = await Users.findAll()
         return res.status(200).json({
             success: true,
-            data: clients,
+            data: passengers,
         })
     } catch (error) {
        console.log(error)
@@ -31,6 +31,6 @@ const getAllClients = async (req, res) => {
 }
 
 module.exports = {
-    newClient,
-    getAllClients
+    newPassenger,
+    getAllPassengers
 };
