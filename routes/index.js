@@ -2,21 +2,19 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers 
-const homeController = require('../database/controllers/homeController')
-const userController = require('../database/controllers/userController')
-const storageController = require('../database/controllers/storageController')
+const passengerController = require('../database/controllers/passengerController')
+const baggageController = require('../database/controllers/baggageController')
 
 module.exports = function() {
-    router.get('/', homeController)
-    
-    // Clients
-    router.get('/passengers', userController.getAllPassengers)
-    router.post('/new-passenger', userController.newPassenger)
+    // Passengers
+    router.get('/passengers', passengerController.getAllPassengers)
+    router.post('/new-passenger', passengerController.newPassenger)
+    router.get('/get-passenger/:id', passengerController.getPassengerById)
+    router.post('/edit-passenger/:id', passengerController.editPassenger)
+    router.post('/delete-passenger/:id', passengerController.deletePassenger)
 
-    // Storage
-    router.post('/new-package', storageController.newPackage)
-    // router.get('/view-storage', storageController)
-
+    // Baggages
+    router.get('/baggages', baggageController.getAllBaggages)
 
     return router
 }

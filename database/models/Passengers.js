@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const db = require('../config/db')
 
-const Users = db.define('users', {
+const Passengers = db.define('passengers', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -25,9 +25,6 @@ const Users = db.define('users', {
             }
         }
     },
-    baggage: {
-        type: Sequelize.ARRAY(Sequelize.INTEGER),
-    }
 })
 
-module.exports = Users;
+module.exports = Passengers;
