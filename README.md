@@ -1,9 +1,9 @@
 # Starting
 
 This project was created with
-[Node.js] (https://nodejs.org/en/) as a server,
-[Postgres] (https://www.postgresql.org/n) as a database,
-[Sequelize] (https://sequelize.org/) as ORM.
+[Node.js](https://nodejs.org/en/) as a server,
+[Postgres](https://www.postgresql.org/n) as a database,
+[Sequelize](https://sequelize.org/) as ORM.
 
 ## Server setup
 
